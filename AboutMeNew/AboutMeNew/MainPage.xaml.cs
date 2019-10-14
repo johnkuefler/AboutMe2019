@@ -17,5 +17,21 @@ namespace AboutMeNew
         {
             InitializeComponent();
         }
+
+
+        private void AboutMeButton_OnClicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new AboutMePage());
+        }
+
+        private void SkillsButton_OnClicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new SkillsPage());
+        }
+
+        private void ContactButton_OnClicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new ContactPage());
+        }
     }
 }

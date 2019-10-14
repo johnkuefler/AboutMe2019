@@ -5,22 +5,46 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:d="http://xamarin.com/schemas/2014/forms/design"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    BackgroundColor="LightGreen"
+    Title="My Bio App"
+    BackgroundImageSource="background.jpg"
     mc:Ignorable="d">
 
     <StackLayout>
         <!--  Place new controls here  -->
 
+        <!--<Button
+            BackgroundColor="White"
+            Clicked="AboutMeButton_OnClicked"
+            Text="About Me"
+            TextColor="Black" />
+        <Button
+            BackgroundColor="White"
+            Clicked="SkillsButton_OnClicked"
+            Text="My Skills"
+            TextColor="Black" />
+        <Button
+            BackgroundColor="White"
+            Text="Contact Me"
+            Clicked="ContactButton_OnClicked"
+            TextColor="Black" />-->
+
+
+
         <Frame
             Margin="20"
             BackgroundColor="White"
             CornerRadius="5"
             HasShadow="True">
 
+            <Frame.GestureRecognizers>
+                <TapGestureRecognizer Tapped="AboutMeButton_OnClicked" />
+            </Frame.GestureRecognizers>
+
             <StackLayout Orientation="Horizontal" Spacing="20">
-                <BoxView
-                    BackgroundColor="Gray"
+
+                <Image
                     HeightRequest="50"
+                    Source="https://img.icons8.com/ios/50/000000/contract-job.png"
                     WidthRequest="50" />
 
                 <Label
@@ -38,16 +62,20 @@
             CornerRadius="5"
             HasShadow="True">
 
+            <Frame.GestureRecognizers>
+                <TapGestureRecognizer Tapped="SkillsButton_OnClicked" />
+            </Frame.GestureRecognizers>
+
             <StackLayout Orientation="Horizontal" Spacing="20">
-                <BoxView
-                    BackgroundColor="Gray"
+                <Image
                     HeightRequest="50"
+                    Source="https://img.icons8.com/dotty/80/000000/visualization-skill.png"
                     WidthRequest="50" />
 
                 <Label
                     Margin="20,0,0,0"
                     FontSize="24"
-                    Text="About Me"
+                    Text="My Skills"
                     TextColor="Gray"
                     VerticalTextAlignment="Center" />
             </StackLayout>
@@ -59,20 +87,25 @@
             CornerRadius="5"
             HasShadow="True">
 
+            <Frame.GestureRecognizers>
+                <TapGestureRecognizer Tapped="ContactButton_OnClicked" />
+            </Frame.GestureRecognizers>
+
             <StackLayout Orientation="Horizontal" Spacing="20">
-                <BoxView
-                    BackgroundColor="Gray"
+                <Image
                     HeightRequest="50"
+                    Source="ic_contact.png"
                     WidthRequest="50" />
 
                 <Label
                     Margin="20,0,0,0"
                     FontSize="24"
-                    Text="About Me"
+                    Text="Contact Me"
                     TextColor="Gray"
                     VerticalTextAlignment="Center" />
             </StackLayout>
         </Frame>
+
 
     </StackLayout>
 
