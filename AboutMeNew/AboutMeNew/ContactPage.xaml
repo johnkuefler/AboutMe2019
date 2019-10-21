@@ -5,13 +5,36 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:d="http://xamarin.com/schemas/2014/forms/design"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="Contact Me"
     mc:Ignorable="d">
     <ContentPage.Content>
         <StackLayout>
-            <Label
-                HorizontalOptions="CenterAndExpand"
-                Text="Contact"
-                VerticalOptions="CenterAndExpand" />
+            <StackLayout BackgroundColor="LightGreen">
+                <Label
+                    Margin="50"
+                    FontAttributes="Bold"
+                    FontSize="32"
+                    HorizontalOptions="Center"
+                    Text="Contact Me"
+                    TextColor="Black" />
+            </StackLayout>
+
+            <StackLayout Margin="30" Spacing="25">
+                <Entry x:Name="nameEntry" Placeholder="Name*" />
+
+                <Entry x:Name="emailEntry" Placeholder="Email*" />
+
+                <Entry x:Name="phoneNumberEntry" Placeholder="Phone Number" />
+
+                <Entry x:Name="questionEntry" Placeholder="Question*" />
+
+
+                <Button
+                    BackgroundColor="LightGreen"
+                    Clicked="Button_OnClicked"
+                    Text="Submit"
+                    TextColor="Black" />
+            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

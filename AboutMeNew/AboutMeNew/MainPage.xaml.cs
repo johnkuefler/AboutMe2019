@@ -33,5 +33,10 @@ namespace AboutMeNew
         {
             Navigation.PushAsync(new ContactPage());
         }
+
+        private void LabelTapGestureRecognizer_OnTapped(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new ContactPage());
+        }
     }
 }

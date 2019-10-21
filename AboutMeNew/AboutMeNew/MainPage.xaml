@@ -10,25 +10,6 @@
     mc:Ignorable="d">
 
     <StackLayout>
-        <!--  Place new controls here  -->
-
-        <!--<Button
-            BackgroundColor="White"
-            Clicked="AboutMeButton_OnClicked"
-            Text="About Me"
-            TextColor="Black" />
-        <Button
-            BackgroundColor="White"
-            Clicked="SkillsButton_OnClicked"
-            Text="My Skills"
-            TextColor="Black" />
-        <Button
-            BackgroundColor="White"
-            Text="Contact Me"
-            Clicked="ContactButton_OnClicked"
-            TextColor="Black" />-->
-
-
 
         <Frame
             Margin="20"
@@ -105,7 +86,6 @@
                     VerticalTextAlignment="Center" />
             </StackLayout>
         </Frame>
-
 
     </StackLayout>
 
