@@ -7,11 +7,12 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
     <ContentPage.Content>
-        <StackLayout>
-            <Label
-                HorizontalOptions="CenterAndExpand"
-                Text="Skill"
-                VerticalOptions="CenterAndExpand" />
+        <StackLayout Padding="20" Spacing="20">
+            <Entry x:Name="newSkillEntry" Placeholder="Enter a skill" />
+
+            <Button Clicked="Button_OnClicked" Text="Add a skill" />
+
+            <ListView x:Name="skillsList" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
