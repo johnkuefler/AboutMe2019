@@ -7,12 +7,49 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
     <ContentPage.Content>
-        <StackLayout Padding="20" Spacing="20">
-            <Entry x:Name="newSkillEntry" Placeholder="Enter a skill" />
 
-            <Button Clicked="Button_OnClicked" Text="Add a skill" />
+        <StackLayout>
+            <StackLayout BackgroundColor="LightGreen">
+                <Label
+                    Margin="50"
+                    FontAttributes="Bold"
+                    FontSize="32"
+                    HorizontalOptions="Center"
+                    Text="Skillz"
+                    TextColor="Black" />
+            </StackLayout>
 
-            <ListView x:Name="skillsList" />
+            <StackLayout Padding="20" Spacing="20">
+                <ListView x:Name="skillsList" HasUnevenRows="True">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout
+                                    Margin="20"
+                                    HorizontalOptions="Center"
+                                    Orientation="Horizontal">
+                                    <Image
+                                        Margin="100,0,0,0"
+                                        HeightRequest="50"
+                                        HorizontalOptions="End"
+                                        Source="{Binding Icon}"
+                                        WidthRequest="50" />
+                                    <Label
+                                        Margin="20,0,0,0"
+                                        FontSize="20"
+                                        HorizontalOptions="Center"
+                                        HorizontalTextAlignment="Center"
+                                        Text="{Binding Name}"
+                                        TextColor="DarkGray"
+                                        VerticalOptions="Center" />
+
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

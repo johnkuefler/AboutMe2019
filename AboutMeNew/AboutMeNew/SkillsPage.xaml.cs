@@ -13,28 +13,31 @@ namespace AboutMeNew
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class SkillsPage : ContentPage
     {
-        public ObservableCollection<string> Skills { get; set; }
+        public ObservableCollection<SkillItem> Skills { get; set; }
 
         public SkillsPage()
         {
             InitializeComponent();
 
-            this.Skills = new ObservableCollection<string>();
+            this.Skills = new ObservableCollection<SkillItem>();
 
-            Skills.Add("Typing");
-            Skills.Add("Talking");
-            Skills.Add("Coding");
+            SkillItem codingSkill = new SkillItem();
+            codingSkill.Name = "Coding";
+            codingSkill.Icon = "https://img.icons8.com/cotton/2x/laptop-coding.png";
+
+            SkillItem publicSpeakingSkill = new SkillItem();
+            publicSpeakingSkill.Name = "Public Speaking";
+            publicSpeakingSkill.Icon = "https://cdn0.iconfinder.com/data/icons/usa-politics/67/24-512.png";
+
+            SkillItem bowlingSkill = new SkillItem();
+            bowlingSkill.Name = "Bowling";
+            bowlingSkill.Icon = "https://image.flaticon.com/icons/png/512/125/125521.png";
+
+            Skills.Add(publicSpeakingSkill);
+            Skills.Add(bowlingSkill);
+            Skills.Add(codingSkill);
 
             skillsList.ItemsSource = this.Skills;
-        }
-
-        private void Button_OnClicked(object sender, EventArgs e)
-        {
-            this.Skills.Add(newSkillEntry.Text);
-
-            skillsList.ItemsSource = this.Skills;
-
-            newSkillEntry.Text = "";
         }
     }
 }
