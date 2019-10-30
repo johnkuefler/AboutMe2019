@@ -20,7 +20,10 @@
             </StackLayout>
 
             <StackLayout Padding="20" Spacing="20">
-                <ListView x:Name="skillsList" HasUnevenRows="True">
+                <ListView
+                    x:Name="skillsList"
+                    HasUnevenRows="True"
+                    ItemSelected="SkillsList_OnItemSelected">
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <ViewCell>
